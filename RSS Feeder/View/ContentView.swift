@@ -9,17 +9,17 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    var articles: [Article] = [
-        Article(id: 1, headline: "This is Test Headline", imgUrl: "https://res.fashionsnap.com/image/upload/w_300,h_300,c_fill,g_auto/asset/article/images/2022/06/biwotsutaeru-person-2nd-01.jpg", websiteName: "fashionsnap.com", text: "This is Text"),
-        Article(id: 2, headline: "This is Test Headline", imgUrl: "https://res.fashionsnap.com/image/upload/w_300,h_300,c_fill,g_auto/asset/article/images/2022/06/biwotsutaeru-person-2nd-01.jpg", websiteName: "fashionsnap.com", text: "This is Text")
+    var items: [RssItem] = [
+      RssItem(id: 1, title: "彫師でありながら現役藝大院生　アーティスト佐藤はなえが提案する「1mmタトゥー」", pubDate: "2020-10-12", link: "https://www.fashionsnap.com/article/hanaesato-interview/", guid: "https://www.fashionsnap.com/article/hanaesato-interview/", author: "", thumbnail: "https://res.fashionsnap.com/image/upload/w_300,h_300,c_fill,g_auto/asset/article/images/2022/06/1mmtatoo-interview_022.jpg", description: " アーティストの佐藤はなえは、東京藝術大学美術学部絵画科油絵専攻を修了後、同大学院で美術解剖学を学ぶ24歳だ。彫師でありながらも現役の藝大院生。"),
+      RssItem(id: 2, title: "彫師でありながら現役藝大院生　アーティスト佐藤はなえが提案する「1mmタトゥー」", pubDate: "2020-10-12", link: "https://www.fashionsnap.com/article/hanaesato-interview/", guid: "https://www.fashionsnap.com/article/hanaesato-interview/", author: "", thumbnail: "https://res.fashionsnap.com/image/upload/w_300,h_300,c_fill,g_auto/asset/article/images/2022/06/1mmtatoo-interview_022.jpg", description: " アーティストの佐藤はなえは、東京藝術大学美術学部絵画科油絵専攻を修了後、同大学院で美術解剖学を学ぶ24歳だ。彫師でありながらも現役の藝大院生。")
     ]
     @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(articles) { article in
-                    ListRowView(article: article)
+                ForEach(items) { item in
+                    ListRowView(item: item)
                 }
             }
             .navigationBarTitle("RSS Feeder")
