@@ -18,6 +18,7 @@
 		682C2CB428649D6100F0E9F6 /* RSS_FeederUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682C2CB328649D6100F0E9F6 /* RSS_FeederUITestsLaunchTests.swift */; };
 		682C2CC128649D8A00F0E9F6 /* Rss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682C2CC028649D8A00F0E9F6 /* Rss.swift */; };
 		682C2CC528649EE200F0E9F6 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682C2CC428649EE200F0E9F6 /* ListRowView.swift */; };
+		685ED6B8286B378900326C39 /* RssStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ED6B7286B378900326C39 /* RssStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		682C2CB328649D6100F0E9F6 /* RSS_FeederUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSS_FeederUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		682C2CC028649D8A00F0E9F6 /* Rss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rss.swift; sourceTree = "<group>"; };
 		682C2CC428649EE200F0E9F6 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		685ED6B7286B378900326C39 /* RssStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				682C2CC028649D8A00F0E9F6 /* Rss.swift */,
+				685ED6B7286B378900326C39 /* RssStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				682C2C9B28649D6000F0E9F6 /* Persistence.swift in Sources */,
 				682C2C9E28649D6000F0E9F6 /* RSS_Feeder.xcdatamodeld in Sources */,
+				685ED6B8286B378900326C39 /* RssStore.swift in Sources */,
 				682C2C9428649D5E00F0E9F6 /* ContentView.swift in Sources */,
 				682C2C9228649D5E00F0E9F6 /* RSS_FeederApp.swift in Sources */,
 				682C2CC128649D8A00F0E9F6 /* Rss.swift in Sources */,
