@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct SearchRssListRowView: View {
+	@Environment(\.managedObjectContext) var moc
 	var webSite: WebSite
+	@State var hasSaved = false
+	
     var body: some View {
       HStack(alignment: .center){
 		  UrlImageView(viewModel: .init(url: webSite.favicon))
@@ -23,10 +26,14 @@ struct SearchRssListRowView: View {
             .font(.system(.caption2, design: .rounded))
         }
         
+		Spacer()
+		  
         Button(action: {
-          print("pushed")
+			if !hasSaved {
+				saveAsBookmark()
+			}
         }, label: {
-          Image(systemName: "plus")
+			Image(systemName: hasSaved ? "checkmark" : "plus")
             .resizable()
             .frame(width: 20, height: 20)
             .foregroundColor(.gray)
@@ -34,6 +41,20 @@ struct SearchRssListRowView: View {
       }
       .padding(.vertical, 5)
     }
+	
+	private func saveAsBookmark()
+	{
+		let bookmark = Bookmark(context: moc)
+		bookmark.id = UUID()
+		bookmark.siteName = webSite.siteName
+		bookmark.siteUrl = webSite.siteUrl
+		bookmark.url = webSite.url
+		bookmark.favicon = webSite.favicon
+		
+		if ((try? moc.save()) != nil) {
+			hasSaved = true
+		}
+	}
 }
 
 struct SearchRssListRowView_Previews: PreviewProvider {
