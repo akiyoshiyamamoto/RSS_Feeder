@@ -10,7 +10,12 @@ import CoreData
 
 struct ContentView: View {
   @ObservedObject var rssStore = RssStore()
-  
+	@FetchRequest(
+		entity: Bookmark.entity(),
+		sortDescriptors: [NSSortDescriptor(keyPath: \Bookmark.id, ascending: true)],
+		predicate: nil,
+		animation: .default
+	) var bookmarks: FetchedResults<Bookmark>
     @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
@@ -29,7 +34,11 @@ struct ContentView: View {
 			})
         }
         .onAppear() {
-          self.rssStore.fetchLatestRss()
+			var urls: Array<String> = []
+			for i in 0..<bookmarks.count {
+				urls.append(bookmarks[i].url!)
+			}
+			self.rssStore.fetchLatestRss(urls: urls)
         }
     }
 }

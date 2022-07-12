@@ -8,6 +8,7 @@
 import CoreData
 
 class PersistenceController: ObservableObject {
+	static let shared = PersistenceController()
     let container = NSPersistentContainer(name: "Bookmark")
 	
 	init() {

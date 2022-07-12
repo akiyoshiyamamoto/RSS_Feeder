@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct RSS_FeederApp: App {
-    @StateObject private var persistenceController = PersistenceController()
+	let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
