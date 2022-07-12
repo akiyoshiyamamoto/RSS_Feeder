@@ -10,18 +10,18 @@ import SwiftUI
 struct SearchRssView: View {
 	@StateObject var model = WebSiteViewModel()
 	
-    var body: some View {
-      NavigationView {
-		  // listでplistから取得したデータをSearchRssLIstRow
-		  List(model.webSites) { webSite in
-			  SearchRssListRowView(webSite: webSite)
-		  } 
-      }
-    }
+	var body: some View {
+		NavigationView {
+			// listでplistから取得したデータをSearchRssLIstRow
+			List(model.webSites) { webSite in
+				SearchRssListRowView(webSite: webSite)
+			} 
+		}
+	}
 }
 
 struct SearchRssView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchRssView()
-    }
+	static var previews: some View {
+		SearchRssView()
+	}
 }

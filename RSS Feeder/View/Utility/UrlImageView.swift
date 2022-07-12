@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UrlImageView: View {
 	@ObservedObject var viewModel: UrlImageViewModel
-    var body: some View {
+	var body: some View {
 		if let imageData = self.viewModel.downloadData {
 			if let image = UIImage(data: imageData) {
 				return Image(uiImage: image).resizable()
@@ -19,5 +19,5 @@ struct UrlImageView: View {
 		} else {
 			return Image(uiImage: UIImage()).resizable()
 		}
-    }
+	}
 }

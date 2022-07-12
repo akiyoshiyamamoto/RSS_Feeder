@@ -9,7 +9,7 @@ import CoreData
 
 class PersistenceController: ObservableObject {
 	static let shared = PersistenceController()
-    let container = NSPersistentContainer(name: "Bookmark")
+	let container = NSPersistentContainer(name: "Bookmark")
 	
 	init() {
 		container.loadPersistentStores { description, error in

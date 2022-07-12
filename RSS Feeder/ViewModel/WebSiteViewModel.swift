@@ -18,7 +18,7 @@ final class WebSiteViewModel: ObservableObject {
 		guard let url = Bundle.main.url(forResource: "RssList", withExtension: "plist"), let data = try? Data(contentsOf: url) else {
 			return
 		}
-				
+		
 		do {
 			webSites = try PropertyListDecoder().decode([WebSite].self, from: data)
 		} catch {
