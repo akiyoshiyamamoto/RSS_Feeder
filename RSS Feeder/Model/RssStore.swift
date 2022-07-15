@@ -24,31 +24,29 @@ class RssStore: Decodable, ObservableObject {
 	init() {
 	}
 	
-	func fetchLatestRss(urls: Array<String>) {
+	func fetchLatestRss(url: String) {
+		guard let rssUrl = URL(string: url) else {
+			return
+		}
 		
-		for i in 0..<urls.count {
-			guard let rssUrl = URL(string: urls[i]) else {
-				continue
+		let request = URLRequest(url: rssUrl)
+		let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+			if let error = error {
+				print("failed Request with \(error)")
+				return
 			}
 			
-			let request = URLRequest(url: rssUrl)
-			let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
-				if let error = error {
-					print("failed Request with \(error)")
-					return
+			if let data = data {
+				DispatchQueue.main.async {
+					self.items = self.parseJsonData(data: data)
+					self.items.sort { $0.pubDate > $1.pubDate}
 				}
 				
-				if let data = data {
-					DispatchQueue.main.async {
-						self.items += self.parseJsonData(data: data)
-					}
-					
-				}
-				
-			})
+			}
 			
-			task.resume()
-		}
+		})
+		
+		task.resume()
 	}
 	
 	func parseJsonData(data: Data) -> [RssItem] {
@@ -56,7 +54,7 @@ class RssStore: Decodable, ObservableObject {
 		
 		do {
 			let rssStore = try decoder.decode(RssStore.self, from: data)
-			self.items = rssStore.items
+			self.items += rssStore.items
 		} catch {
 			print("failed decode with \(error)")
 		}

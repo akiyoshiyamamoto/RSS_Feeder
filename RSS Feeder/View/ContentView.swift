@@ -34,11 +34,9 @@ struct ContentView: View {
 			})
 		}
 		.onAppear() {
-			var urls: Array<String> = []
 			for i in 0..<bookmarks.count {
-				urls.append(bookmarks[i].url!)
+				self.rssStore.fetchLatestRss(url: bookmarks[i].url!)
 			}
-			self.rssStore.fetchLatestRss(urls: urls)
 		}
 	}
 }
