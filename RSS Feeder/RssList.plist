@@ -18,7 +18,7 @@
 		<key>siteUrl</key>
 		<string>fashionsnap.com</string>
 		<key>url</key>
-		<string>https://api.rss2json.com/v1/api.json?rss_url=https://feeds.dailyfeed.jp/feed/s/5/961.rss</string>
+		<string>https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fgigazine.net%2Fnews%2Frss_2.0%2F</string>
 		<key>favicon</key>
 		<string>https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://togetter.com/</string>
 	</dict>
