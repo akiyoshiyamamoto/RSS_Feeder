@@ -10,6 +10,7 @@ import SwiftUI
 
 class RssStore: Decodable, ObservableObject {
 	@Published var items: [RssItem] = []
+	var ele: [Any] = []
 	private static var rssUrl = ""
 	
 	enum CodingKeys: CodingKey {
@@ -38,7 +39,7 @@ class RssStore: Decodable, ObservableObject {
 			
 			if let data = data {
 				DispatchQueue.main.async {
-					self.items = self.parseJsonData(data: data)
+					self.ele = self.parseJsonData(data: data)
 				}
 				
 			}

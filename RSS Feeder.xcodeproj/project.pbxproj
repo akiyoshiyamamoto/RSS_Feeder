@@ -27,6 +27,7 @@
 		685ED6B8286B378900326C39 /* RssStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ED6B7286B378900326C39 /* RssStore.swift */; };
 		68D58C3C28794E9000ADDCB0 /* Bookmark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68D58C3A28794E9000ADDCB0 /* Bookmark.xcdatamodeld */; };
 		68D9D6642873190E004E1FC2 /* WebSiteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D9D6632873190E004E1FC2 /* WebSiteViewModel.swift */; };
+		68F6DE862882ADB100DA8432 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F6DE852882ADB100DA8432 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		685ED6B7286B378900326C39 /* RssStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssStore.swift; sourceTree = "<group>"; };
 		68D58C3B28794E9000ADDCB0 /* Bookmark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookmark.xcdatamodel; sourceTree = "<group>"; };
 		68D9D6632873190E004E1FC2 /* WebSiteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSiteViewModel.swift; sourceTree = "<group>"; };
+		68F6DE852882ADB100DA8432 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				68201CFF286EEF46005DFD48 /* MyList */,
 				682C2C9328649D5E00F0E9F6 /* ContentView.swift */,
 				682C2CC428649EE200F0E9F6 /* ListRowView.swift */,
+				68F6DE852882ADB100DA8432 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				682C2CC128649D8A00F0E9F6 /* Rss.swift in Sources */,
 				68D9D6642873190E004E1FC2 /* WebSiteViewModel.swift in Sources */,
 				682C2CC528649EE200F0E9F6 /* ListRowView.swift in Sources */,
+				68F6DE862882ADB100DA8432 /* DetailView.swift in Sources */,
 				68201D01286EEF86005DFD48 /* SearchRssView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,8 +20,8 @@ struct ContentView: View {
 	
 	var body: some View {
 		NavigationView {
-			List {
-				ForEach(rssStore.items) { item in
+			List(rssStore.items) {  item in
+				NavigationLink(destination: DetailView(item: item)) {
 					ListRowView(item: item)
 				}
 			}
