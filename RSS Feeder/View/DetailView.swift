@@ -13,7 +13,7 @@ struct DetailView: View {
 		VStack {
 			Text(item.title)
 				.bold()
-				.font(.system(.title, design: .rounded))
+				.font(.system(.headline, design: .rounded))
 			
 			Spacer()
 			
@@ -41,6 +41,10 @@ struct DetailView: View {
 			}, label: {
 				Text("Visit Website")
 			})
+			.frame(maxWidth: .infinity, minHeight: 30)
+			.foregroundColor(.gray)
+			
+			Spacer()
 		}
 		.padding(.horizontal, 5)
     }
