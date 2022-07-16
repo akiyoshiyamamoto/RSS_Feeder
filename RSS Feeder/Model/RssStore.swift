@@ -39,7 +39,6 @@ class RssStore: Decodable, ObservableObject {
 			if let data = data {
 				DispatchQueue.main.async {
 					self.items = self.parseJsonData(data: data)
-					self.items.sort { $0.pubDate > $1.pubDate}
 				}
 				
 			}
