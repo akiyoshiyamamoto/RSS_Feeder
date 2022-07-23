@@ -9,34 +9,24 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-	@ObservedObject var rssStore = RssStore()
-	@FetchRequest(
-		entity: Bookmark.entity(),
-		sortDescriptors: [NSSortDescriptor(keyPath: \Bookmark.id, ascending: true)],
-		predicate: nil,
-		animation: .default
-	) var bookmarks: FetchedResults<Bookmark>
-	@Environment(\.managedObjectContext) private var viewContext
-	
 	var body: some View {
-		NavigationView {
-			List(rssStore.items) {  item in
-				NavigationLink(destination: DetailView(item: item)) {
-					ListRowView(item: item)
-				}
-			}
-			.navigationBarTitle("RSS Feeder")
-			.navigationBarItems(trailing: NavigationLink(destination: SearchRssView())
-								{
-				Image(systemName: "plus")
-					.frame(width: 10, height: 10)
-					.foregroundColor(.gray)
-			})
-		}
-		.onAppear() {
-			for i in 0..<bookmarks.count {
-				self.rssStore.fetchLatestRss(url: bookmarks[i].url!)
-			}
+		TabView{
+			FeederView()
+				.tabItem {
+					VStack {
+						Image(systemName: "square.stack.3d.up")
+							.frame(width: 10, height: 10)
+							.foregroundColor(.gray)
+					}
+				}.tag(1)
+			SearchRssView()
+				.tabItem {
+					VStack {
+						Image(systemName: "plus")
+							.frame(width: 10, height: 10)
+							.foregroundColor(.gray)
+					}
+				}.tag(2)
 		}
 	}
 }
