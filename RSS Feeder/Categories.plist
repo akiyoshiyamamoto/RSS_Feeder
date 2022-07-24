@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>デジタル</string>
+		<key>image</key>
+		<string>digital</string>
+		<key>hashTag</key>
+		<string>#デジタル</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Web design</string>
+		<key>image</key>
+		<string>web_design</string>
+		<key>hashTag</key>
+		<string>#Web  design</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>マーケティング</string>
+		<key>image</key>
+		<string>marketing</string>
+		<key>hashTag</key>
+		<string>#マーケティング</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ビジネス</string>
+		<key>image</key>
+		<string>business</string>
+		<key>hashTag</key>
+		<string>#ビジネス</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>サイエンス</string>
+		<key>image</key>
+		<string>science</string>
+		<key>hashTag</key>
+		<string>#サイエンス</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>政治</string>
+		<key>image</key>
+		<string>political</string>
+		<key>hashTag</key>
+		<string>#政治</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>セキュリティ</string>
+		<key>image</key>
+		<string>safe</string>
+		<key>hashTag</key>
+		<string>#セキュリティ</string>
+	</dict>
+</array>
+</plist>
