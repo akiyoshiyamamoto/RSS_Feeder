@@ -12,10 +12,17 @@ struct SearchRssView: View {
 	
 	var body: some View {
 		NavigationView {
-			// listでplistから取得したデータをSearchRssLIstRow
-			List(model.webSites) { webSite in
-				SearchRssListRowView(webSite: webSite)
-			} 
+			List {
+				Section(header: Text("Featured Categories")) {
+					CategoriesView()
+				}
+				
+				Section(header: Text("Explore the Web")) {
+					ForEach(model.webSites) { website in
+						SearchRssListRowView(webSite: website)
+					}
+				}
+			}
 		}
 	}
 }

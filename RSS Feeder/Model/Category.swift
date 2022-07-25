@@ -7,8 +7,15 @@
 
 import Foundation
 
-struct Category: Decodable {
+struct Category: Decodable, Identifiable {
+	var id = UUID()
 	var name: String
 	var image: String
 	var hashTag: String
+	
+	private enum CodingKeys: String, CodingKey {
+		case name
+		case image
+		case hashTag
+	}
 }
