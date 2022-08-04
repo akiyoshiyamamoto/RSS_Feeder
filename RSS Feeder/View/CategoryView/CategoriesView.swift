@@ -13,7 +13,9 @@ struct CategoriesView: View {
 		ScrollView(.horizontal, showsIndicators: false) {
 			HStack {
 					ForEach(viewModel.categories) { category in
-						CardView(category: category)
+						NavigationLink(destination: SearchListView(sectionTitle: "Explore Web", hashTag: category.hashTag)) {
+							CardView(category: category)
+						}
 				}
 			}
 		}

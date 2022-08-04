@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchRssView: View {
+	@State var hashTag = ""
 	@StateObject var model = WebSiteViewModel()
 	
 	var body: some View {
@@ -17,18 +18,8 @@ struct SearchRssView: View {
 					CategoriesView()
 				}
 				
-				Section(header: Text("Explore the Web")) {
-					ForEach(model.webSites) { website in
-						SearchRssListRowView(webSite: website)
-					}
-				}
+				SearchListView(sectionTitle: "Explore web")
 			}
 		}
-	}
-}
-
-struct SearchRssView_Previews: PreviewProvider {
-	static var previews: some View {
-		SearchRssView()
 	}
 }

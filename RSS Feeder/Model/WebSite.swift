@@ -9,12 +9,13 @@ import SwiftUI
 
 struct WebSite: Decodable,Identifiable {
 	var id = UUID()
-	let siteName, siteUrl, url, favicon: String
+	let siteName, siteUrl, url, favicon: String, hashTag: String
 	
 	private enum CodingKeys: String, CodingKey {
 		case siteName
 		case siteUrl
 		case url
 		case favicon
+		case hashTag
 	}
 }

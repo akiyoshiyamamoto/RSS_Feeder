@@ -3,6 +3,20 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>hashTag</key>
+		<string>#デジタル</string>
+		<key>siteName</key>
+		<string>ASCII.jp</string>
+		<key>siteUrl</key>
+		<string>ASCII.jp</string>
+		<key>url</key>
+		<string> https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fascii.jp%2Frss.xml</string>
+		<key>favicon</key>
+		<string>https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://www.fashionsnap.com/&amp;size=16</string>
+	</dict>
+	<dict>
+		<key>hashTag</key>
+		<string></string>
 		<key>siteName</key>
 		<string>fashionsnap.com</string>
 		<key>siteUrl</key>
@@ -13,10 +27,12 @@
 		<string>https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://www.fashionsnap.com/&amp;size=16</string>
 	</dict>
 	<dict>
+		<key>hashTag</key>
+		<string></string>
 		<key>siteName</key>
-		<string>fashionsnap.com</string>
+		<string>gigazine</string>
 		<key>siteUrl</key>
-		<string>fashionsnap.com</string>
+		<string>gigazine</string>
 		<key>url</key>
 		<string>https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fgigazine.net%2Fnews%2Frss_2.0%2F</string>
 		<key>favicon</key>

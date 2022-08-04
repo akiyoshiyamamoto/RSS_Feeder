@@ -25,12 +25,6 @@ struct FeederView: View {
 				}
 			}
 			.navigationBarTitle("RSS Feeder")
-			.navigationBarItems(trailing: NavigationLink(destination: SearchRssView())
-								{
-				Image(systemName: "plus")
-					.frame(width: 10, height: 10)
-					.foregroundColor(.gray)
-			})
 		}
 		.onAppear() {
 			for i in 0..<bookmarks.count {

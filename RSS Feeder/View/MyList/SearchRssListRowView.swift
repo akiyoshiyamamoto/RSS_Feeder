@@ -56,9 +56,3 @@ struct SearchRssListRowView: View {
 		}
 	}
 }
-
-struct SearchRssListRowView_Previews: PreviewProvider {
-	static var previews: some View {
-		SearchRssListRowView(webSite: WebSite(siteName: "test", siteUrl: "test", url: "teswt", favicon: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://togetter.com/"))
-	}
-}
