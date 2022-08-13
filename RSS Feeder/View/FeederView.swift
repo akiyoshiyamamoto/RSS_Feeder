@@ -23,8 +23,10 @@ struct FeederView: View {
 				NavigationLink(destination: DetailView(item: item)) {
 					ListRowView(item: item)
 				}
+				.listRowSeparator(.hidden)
 			}
 			.navigationBarTitle("RSS Feeder")
+			.listStyle(.plain)
 		}
 		.onAppear() {
 			for i in 0..<bookmarks.count {

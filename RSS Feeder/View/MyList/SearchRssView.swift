@@ -16,10 +16,13 @@ struct SearchRssView: View {
 			List {
 				Section(header: Text("Featured Categories")) {
 					CategoriesView()
+						.listRowSeparator(.hidden)
 				}
 				
 				SearchListView(sectionTitle: "Explore web")
+					.listRowSeparator(.hidden)
 			}
+			.listStyle(.plain)
 		}
 	}
 }
